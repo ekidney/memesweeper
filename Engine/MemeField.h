@@ -2,6 +2,7 @@
 
 #include "Graphics.h"
 #include "Sound.h"
+#include "SelectionMenu.h"
 
 class MemeField
 {
@@ -53,11 +54,18 @@ private:
 	bool GameIsWon() const;
 private:
 	static constexpr int width = 8;
-	static constexpr int height = 6;
+	static constexpr int height = 8;
+	static constexpr int widthSmall = 8;
+	static constexpr int heightSmall = 8;
+	static constexpr int widthMedium = 16;
+	static constexpr int heightMedium = 16;
+	static constexpr int widthLarge = 32;
+	static constexpr int heightLarge = 32;
 	static constexpr int borderThickness = 10;
 	static constexpr Color borderColor = Colors::Blue;
 	Sound sndLose = Sound( L"spayed.wav" );
 	Vei2 topLeft;
 	State state = State::Memeing;
 	Tile field[width * height];
+	
 };
